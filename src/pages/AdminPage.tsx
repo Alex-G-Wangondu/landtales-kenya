@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -13,7 +12,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 import { Users, Settings, LayoutDashboard, FileText, MapPin } from "lucide-react";
-import propertiesData from '@/data/properties';
+import { properties } from '@/data/properties';
 
 const propertyFormSchema = z.object({
   title: z.string().min(3, { message: "Title must be at least 3 characters" }),
@@ -61,7 +60,7 @@ const AdminPage = () => {
               <CardTitle className="text-sm font-medium">Properties</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">{propertiesData.length}</div>
+              <div className="text-2xl font-bold">{properties.length}</div>
               <p className="text-xs text-muted-foreground">Active listings</p>
             </CardContent>
           </Card>
@@ -245,12 +244,12 @@ const AdminPage = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      {propertiesData.slice(0, 5).map((property) => (
+                      {properties.slice(0, 5).map((property) => (
                         <tr key={property.id} className="border-b">
                           <td className="py-3 px-2">{property.title}</td>
                           <td className="py-3 px-2">{property.location}</td>
                           <td className="py-3 px-2">{property.price}</td>
-                          <td className="py-3 px-2">{property.size}</td>
+                          <td className="py-3 px-2">{property.area}</td>
                           <td className="py-3 px-2 flex gap-2">
                             <Button variant="outline" size="sm">Edit</Button>
                             <Button variant="outline" size="sm" className="text-red-500 hover:text-red-700">Delete</Button>
