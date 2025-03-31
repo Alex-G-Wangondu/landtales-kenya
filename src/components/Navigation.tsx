@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -24,6 +24,10 @@ const Navigation = () => {
           <Link to="/properties" className="nav-link font-medium">Properties</Link>
           <Link to="/about" className="nav-link font-medium">About</Link>
           <Link to="/contact" className="nav-link font-medium">Contact</Link>
+          <Link to="/admin" className="nav-link font-medium flex items-center">
+            <Shield className="h-4 w-4 mr-1" />
+            Admin
+          </Link>
           <Link to="/interest">
             <Button className="bg-kenya-terracotta hover:bg-kenya-sienna">
               Express Interest
@@ -56,6 +60,10 @@ const Navigation = () => {
           <Link to="/properties" className="text-lg font-medium" onClick={closeMenu}>Properties</Link>
           <Link to="/about" className="text-lg font-medium" onClick={closeMenu}>About</Link>
           <Link to="/contact" className="text-lg font-medium" onClick={closeMenu}>Contact</Link>
+          <Link to="/admin" className="text-lg font-medium flex items-center justify-center" onClick={closeMenu}>
+            <Shield className="h-4 w-4 mr-1" />
+            Admin
+          </Link>
           <Link to="/interest" onClick={closeMenu}>
             <Button className="w-full bg-kenya-terracotta hover:bg-kenya-sienna">
               Express Interest
