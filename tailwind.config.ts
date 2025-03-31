@@ -63,14 +63,12 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				kenya: {
-					'terracotta': '#CD5C5C',
-					'sienna': '#A0522D',
-					'sage': '#8A9A5B',
-					'forest': '#228B22',
-					'gold': '#DAA520',
-					'earth': '#935116',
-					'sand': '#F4A460'
+				// New land color scheme
+				land: {
+					'deep-green': '#165B33', // Deep Green for headlines, CTAs, buttons
+					'golden-yellow': '#DAA520', // Golden Yellow for accents
+					'soft-beige': '#F5F5DC', // Soft Beige for backgrounds
+					'charcoal-gray': '#333333', // Charcoal Gray for text
 				}
 			},
 			borderRadius: {
