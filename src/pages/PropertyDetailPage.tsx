@@ -1,4 +1,3 @@
-
 import { useParams, Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -6,7 +5,7 @@ import { properties } from '@/data/properties';
 import { Button } from '@/components/ui/button';
 import { MapPin, Home, Ruler, Share2, ArrowLeft } from 'lucide-react';
 import { useEffect } from 'react';
-import { PropertyCard } from '@/components/PropertyCard';
+import PropertyCard from '@/components/PropertyCard';
 
 const PropertyDetailPage = () => {
   const { id } = useParams<{ id: string }>();
